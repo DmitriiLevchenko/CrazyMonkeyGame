@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
+    public static final String GAMELOG = "Gamelog";
     private Button exit,start,rules;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
