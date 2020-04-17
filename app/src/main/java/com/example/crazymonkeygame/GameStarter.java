@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.net.wifi.p2p.WifiP2pManager;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
@@ -26,13 +27,14 @@ import static java.lang.Thread.sleep;
 
 public class GameStarter extends AppCompatActivity implements IMove {
     private ImageView head, body, lefthand, righthand, leftleg, rightleg;
+
     public static int quantitymoves = 3;
     public static int number = 0;
-    public Handler handler;
-    public Timer timer;
     private TextView textView;
 
 
+    private static final int TIMER_DELAY = 3000; // millis
+    private static final int TIMER_PERIOD = 1000; //millis
 
 
     @Override
@@ -40,23 +42,14 @@ public class GameStarter extends AppCompatActivity implements IMove {
         super.onCreate(savedInstanceState);
 
 
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        HeadAnim();
-                    }
-                });
-            }
-        });
-        thread.start();
+
         setContentView(R.layout.activity_game_starter);
         InizalizateComponents();
+        HeadAnim();
         GameProcess.arrayList.clear();
         printText(WriteText.START);
-        nextstep();
+
+        LoopAnimations(quantitymoves);
     }
 
     private void InizalizateComponents() {
@@ -202,16 +195,42 @@ public class GameStarter extends AppCompatActivity implements IMove {
                 GameStarter.number = 0;
                 GameStarter.quantitymoves++;
                 printText(WriteText.NEXTSTEP);
-                nextstep();
+
+                LoopAnimations(quantitymoves);
+
             }
 
         }
     }
 
 
-    public void nextstep()//поочередная демострация движений которые надо повторять + запись в масив для дальнейшего сравнения в checker
-    {
-        for(int i = 0;i< GameStarter.quantitymoves;i++)
+    private void LoopAnimations(final int animationsCount){
+
+        Timer timer = new Timer();
+        timer.scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                if(GameProcess.arrayList.size() < animationsCount ){
+                    int animation = new Random().nextInt(BodyParts.values().length);
+                    ShowAnimation(animation);
+                }else{
+                    cancel();
+                }
+            }
+        },TIMER_DELAY,TIMER_PERIOD);
+
+    }
+
+    private void ShowAnimation(int animation){
+        Log.d("CALL ANIMATION","CALL");
+        GameProcess.arrayList.add(BodyParts.values()[animation]);
+        ChoosetypeofAnim(BodyParts.values()[animation]);
+        Log.d(MainActivity.GAMELOG,BodyParts.values()[animation].toString());
+    }
+
+
+    /*public void nextstep()//поочередная демострация движений которые надо повторять + запись в масив для дальнейшего сравнения в checker{
+        for(int i = 0;i < GameStarter.quantitymoves;i++)
         {
             int pick = new Random().nextInt(BodyParts.values().length);
             switch (BodyParts.values()[pick]) {
@@ -237,13 +256,14 @@ public class GameStarter extends AppCompatActivity implements IMove {
                     break;
             }
         }
-        Log.d(MainActivity.GAMELOG,"Arraylist");
+        /*Log.d(MainActivity.GAMELOG,"Arraylist");
         for(int i = 0;i < GameProcess.arrayList.size();i++)
         {
             Log.d(MainActivity.GAMELOG,GameProcess.arrayList.get(i).toString());
         }
 
-    }
+    }*/
+
     public void printText(WriteText writeText)//выводит сообщения в textView
     {
       switch (writeText)
