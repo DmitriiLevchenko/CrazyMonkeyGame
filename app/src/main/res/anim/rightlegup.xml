@@ -9,8 +9,8 @@
         android:duration="700"
         android:fromDegrees="0"
         android:pivotX="10%"
-        android:pivotY="10%"
+        android:pivotY="30%"
         android:startOffset="0"
-        android:toDegrees="35" />
+        android:toDegrees="30" />
 
 </set>

@@ -7,79 +7,78 @@
     tools:context=".GameStarter"
     android:background="@drawable/background_2_1">
 
-    <ImageView
-        android:id="@+id/head"
-        android:layout_width="120dp"
-        android:layout_height="117dp"
-        android:layout_marginStart="172dp"
-        android:layout_marginBottom="288dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/face" />
-
-    <ImageView
-        android:id="@+id/leftleg"
-        android:layout_width="97dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="140dp"
-        android:layout_marginBottom="84dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/leg1" />
-
-    <ImageView
-        android:id="@+id/body"
-        android:layout_width="106dp"
-        android:layout_height="134dp"
-
-        android:layout_marginStart="172dp"
-        android:layout_marginBottom="164dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/body" />
-
-    <ImageView
-        android:id="@+id/lefthand"
-        android:layout_width="111dp"
-        android:layout_height="145dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginBottom="152dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/hand1" />
-
-    <ImageView
-        android:id="@+id/righthand"
-        android:layout_width="103dp"
-        android:layout_height="183dp"
-        android:layout_marginStart="252dp"
-        android:layout_marginBottom="244dp"
-        android:rotation="0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/hand2" />
-
-    <ImageView
-        android:id="@+id/rightleg"
-        android:layout_width="127dp"
-        android:layout_height="166dp"
-        android:layout_marginStart="228dp"
-        android:layout_marginBottom="68dp"
-        android:rotation="10"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/leg2" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="406dp"
         android:layout_height="115dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="4dp"
         android:text="TextView"
         android:textColor="@color/black"
         android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/rightleg"
+        android:layout_width="144dp"
+        android:layout_height="162dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginBottom="112dp"
+        android:rotation="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/leg2" />
+
+    <ImageView
+        android:id="@+id/leftleg"
+        android:layout_width="134dp"
+        android:layout_height="210dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginBottom="60dp"
+        android:rotation="-15"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/leg1" />
+
+    <ImageView
+        android:id="@+id/righthand"
+        android:layout_width="173dp"
+        android:layout_height="254dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginBottom="296dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/hand2" />
+
+    <ImageView
+        android:id="@+id/body"
+        android:layout_width="154dp"
+        android:layout_height="205dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginBottom="180dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/body" />
+
+    <ImageView
+        android:id="@+id/lefthand"
+        android:layout_width="128dp"
+        android:layout_height="169dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="204dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/hand1" />
+
+    <ImageView
+        android:id="@+id/head"
+        android:layout_width="224dp"
+        android:layout_height="164dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="356dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/face" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

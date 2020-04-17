@@ -7,10 +7,10 @@
 
     <rotate
         android:duration="700"
-        android:fromDegrees="15"
+        android:fromDegrees="8"
         android:pivotX="50%"
         android:pivotY="100%"
         android:startOffset="0"
-        android:toDegrees="-15" />
+        android:toDegrees="-8" />
 
 </set>

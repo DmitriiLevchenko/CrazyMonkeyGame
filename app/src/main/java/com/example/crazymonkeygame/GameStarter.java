@@ -32,10 +32,26 @@ public class GameStarter extends AppCompatActivity implements IMove {
     public Timer timer;
     private TextView textView;
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
+
+
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        HeadAnim();
+                    }
+                });
+            }
+        });
+        thread.start();
         setContentView(R.layout.activity_game_starter);
         InizalizateComponents();
         GameProcess.arrayList.clear();
@@ -173,7 +189,7 @@ public class GameStarter extends AppCompatActivity implements IMove {
             {
                 Log.d(MainActivity.GAMELOG,"finish" + bodyParts.toString() + "!=" + GameProcess.arrayList.get(GameStarter.number).toString());
                 printText(WriteText.FINISH);
-                this.finish();
+                //this.finish();
             }
             else
             {
