@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/background_1">
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="206dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginBottom="56dp"
+        android:width="250dp"
+        android:height="70dp"
+        android:background="@drawable/button"
+        android:gravity="center"
+        android:text="exit"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/rules"
+        android:layout_width="223dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="40dp"
+        android:width="250dp"
+        android:height="70dp"
+        android:background="@drawable/button"
+        android:gravity="center"
+        android:text="rules"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/exit"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="217dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="32dp"
+        android:width="250dp"
+        android:height="70dp"
+        android:background="@drawable/button"
+        android:gravity="center"
+        android:text="start"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rules"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

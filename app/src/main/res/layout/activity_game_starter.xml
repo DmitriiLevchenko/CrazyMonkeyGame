@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameStarter"
+    android:background="@drawable/background_2_1">
+
+    <ImageView
+        android:id="@+id/head"
+        android:layout_width="120dp"
+        android:layout_height="117dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginBottom="288dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/face" />
+
+    <ImageView
+        android:id="@+id/leftleg"
+        android:layout_width="97dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginBottom="84dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/leg1" />
+
+    <ImageView
+        android:id="@+id/body"
+        android:layout_width="106dp"
+        android:layout_height="134dp"
+
+        android:layout_marginStart="172dp"
+        android:layout_marginBottom="164dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/body" />
+
+    <ImageView
+        android:id="@+id/lefthand"
+        android:layout_width="111dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginBottom="152dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/hand1" />
+
+    <ImageView
+        android:id="@+id/righthand"
+        android:layout_width="103dp"
+        android:layout_height="183dp"
+        android:layout_marginStart="252dp"
+        android:layout_marginBottom="244dp"
+        android:rotation="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/hand2" />
+
+    <ImageView
+        android:id="@+id/rightleg"
+        android:layout_width="127dp"
+        android:layout_height="166dp"
+        android:layout_marginStart="228dp"
+        android:layout_marginBottom="68dp"
+        android:rotation="10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/leg2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
