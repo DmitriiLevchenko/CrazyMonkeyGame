@@ -41,8 +41,6 @@ public class GameStarter extends AppCompatActivity implements IMove {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-
         setContentView(R.layout.activity_game_starter);
         InizalizateComponents();
         HeadAnim();
@@ -211,8 +209,15 @@ public class GameStarter extends AppCompatActivity implements IMove {
             @Override
             public void run() {
                 if(GameProcess.arrayList.size() < animationsCount ){
-                    int animation = new Random().nextInt(BodyParts.values().length);
-                    ShowAnimation(animation);
+                   final int animation = new Random().nextInt(BodyParts.values().length);
+
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            ShowAnimation(animation);
+                        }
+                    });
+
                 }else{
                     cancel();
                 }
